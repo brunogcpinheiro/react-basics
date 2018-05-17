@@ -3,19 +3,19 @@ import PropTypes from 'prop-types';
 import { render } from 'react-dom';
 
 class Button extends Component {
+    static defaultProps = {
+        children: 'Enviar',
+    };
+    
+    static propTypes = {
+        onClick: PropTypes.func.isRequired,
+        children: PropTypes.string,
+    };
+
     render() {
         return <a href="" onClick={this.props.onClick}>{this.props.children}</a>
     }
 }
-
-Button.defaultProps = {
-    children: 'Enviar',
-};
-
-Button.propTypes = {
-    onClick: PropTypes.func.isRequired,
-    children: PropTypes.string,
-};
 
 class App extends Component {
     handleClick() {
