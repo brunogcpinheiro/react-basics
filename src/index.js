@@ -1,21 +1,7 @@
 import React, { Component, Fragment } from 'react';
-import PropTypes from 'prop-types';
 import { render } from 'react-dom';
 
-class Button extends Component {
-    static defaultProps = {
-        children: 'Enviar',
-    };
-    
-    static propTypes = {
-        onClick: PropTypes.func.isRequired,
-        children: PropTypes.string,
-    };
-
-    render() {
-        return <button href="" onClick={this.props.onClick}>{this.props.children}</button>
-    }
-}
+import Button from './Button';
 
 class App extends Component {
     state = {
@@ -37,4 +23,4 @@ class App extends Component {
     }
 }
 
-render(<App />, document.getElementById('app'))
+render(<App />, document.getElementById('app'));
