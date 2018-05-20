@@ -7,19 +7,19 @@ import './style.scss';
 
 class App extends Component {
   state = {
-    counter: 0
+    counter: 0,
   };
 
   handleClick = () => {
     this.setState({ counter: this.state.counter + 1 });
-  }
+  };
 
   render() {
     return (
       <Fragment>
-          <h1>Hello Rocketseat</h1>
-          <h3>{this.state.counter}</h3>
-          <Button onClick={this.handleClick}>Somar</Button>
+        <h1>Hello Rocketseat</h1>
+        <h3>{this.state.counter}</h3>
+        <Button onClick={this.handleClick}>Somar</Button>
       </Fragment>
     );
   }
